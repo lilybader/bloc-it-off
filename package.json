@@ -1,7 +1,7 @@
 {
-  "name": "base-frontend-project",
+  "name": "Bloc-it-off",
   "version": "0.0.1",
-  "description": "Bloc skeleton project for a single page application",
+  "description": "Bloc self-destructing to do list",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
