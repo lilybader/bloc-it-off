@@ -1,5 +1,5 @@
 {
-  "name": "Bloc-it-off",
+  "name": "Bloc-It-Off",
   "version": "0.0.1",
   "description": "Bloc self-destructing to do list",
   "main": "server.js",
