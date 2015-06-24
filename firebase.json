@@ -1,0 +1,9 @@
+{
+  "firebase": "bloc-it-off-timer",
+  "public": "app",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
