@@ -1,15 +1,15 @@
-var blocItOff = angular.module('blocItOff', ['ui-router']);
+var blocItOff = angular.module('blocItOff', ['ui.router']);
         
 blocItOff.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('currentTasks', {
             url:'/currentTasks',
-            template:'<div>This my active tasks</div>'
+            templateURL:'templates/partial/currentTasks.html'
         })
 
         .state('taskHistory', {
             url:'/taskHistory',
-            template:'<div>This is my history page</div>'
+            template:'<div>This is a page</div>'
         }); 
 
        $urlRouterProvider.otherwise('/');
