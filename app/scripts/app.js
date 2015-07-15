@@ -1,35 +1,40 @@
-var blocItOff = angular.module('blocItOff', ['ui.router', 'firebase']);
-        
-blocItOff.config(function($stateProvider, $urlRouterProvider) {
+app = angular.module('BlocItOff', ['ui.router', 'firebase'])
+
+app.config(['$locationProvider', '$stateProvider', function($locationProvider, $stateProvider) {
+    $locationProvider.html5Mode(true);
+
     $stateProvider
-        .state('currentTasks', {
-            url:'/currentTasks',
-            templateURL:'templates/currentTasks.html'
-            // controller:'currentTasksController'
-        })
+      .state('home', {
+        url: '/',
+        templateUrl: "templates/home.html"
+      });
 
-        .state('taskHistory', {
-            url:'/taskHistory',
-            template:'templates/taskHistory.html'
-        }); 
+      $stateProvider
+      .state('tasks', {
+        url: '/tasks',
+        controller: 'taskController',
+        templateUrl: "templates/currentTasks.html"
+      });
 
-       $urlRouterProvider.otherwise('/');
-});
 
-// blocItOff.controller('currentTasksController', ['$scope', function($scope) 
-// {
-//        $scope.tasks = [
-//             {'title':'Make a Task', 'done':false}
-//        ];
+      $stateProvider
+      .state('history', {
+        url: '/history',
+        controller: 'taskHistoryController',
+        templateUrl: "templates/taskHistory.html"
+      });
+  }]);
 
-//        $scope.addTask = function(){
-//             $scope.tasks.push({'title':$scope.newTask, 'done':false})
-//             $scope.newTask = ''
-//        }
-//        $scope.clearCompleted = function(){
-//             $scope.tasks = $scope.tasks.filter(function(item){
-//                 return !item.done
-//             })
+app.controller('taskController', ['$scope', function ($scope) {
 
-//        }
-// }]);
+
+}]);
+
+app.controller('taskController', ['$scope', function ($scope) {
+
+
+}]);
+
+
+
+
