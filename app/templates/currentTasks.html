@@ -1,10 +1,15 @@
-
-<div>
-  <h1>Current Tasks</h1>
-  <table>
-    <tr>
-      <th>Task</th>
-      <th>Priority</th>
-    </tr>
-  </table>
+<section>
+<div ng-controller='currentTasks.controller'>
+    <form name='frm' ng-submit='addTask()'>
+        <input type='text' name='newTask' ng-model='newTask' required />
+        <button ng-disabled='frm.$invalid'>Add Task</button>
+    </form>
+    <button ng-click='clearCompleted()'>Clear Completed</button>
+    <ul>
+         <li ng-repeat='tasks in tasks'>
+            <input type="checkbox" ng-model='task.done' />
+            <span ng-class='{'done':task.done}'>{{task.title}}</span>
+        </li>
+    </ul>
 </div>
+</section>
