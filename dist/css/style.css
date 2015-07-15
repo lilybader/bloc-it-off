@@ -1,18 +1,36 @@
-html {
-  text-transform: uppercase; }
-
 body {
-  font-family: Arial, Verdana, sans-serif;
   color: #111111; }
+  body .small-headline {
+    color: #111;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 32px;
+    margin: 0 0 50px;
+    text-align: center; }
+  body .large-headline {
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 175px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: center; }
+  body .task-buttons {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif; }
+    body .task-buttons a:link {
+      text-decoration: none;
+      padding-right: 20px; }
 
-table {
-  width: 600px; }
-
-th {
-  padding: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 90%;
-  border-bottom: 2px solid #111111;
-  border-top: 1px solid #999;
-  text-align: left; }
+button {
+  background: #ffffff;
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  border-radius: 24px;
+  font-family: Arial;
+  color: #666666;
+  font-size: 13px;
+  padding: 5px 13px 5px 14px;
+  border: solid #dcdee0 2px;
+  text-decoration: none; }
