@@ -13,7 +13,13 @@
          <li ng-repeat='task in task'>
             <input type="checkbox" ng-model='task.done' />
             <span ng-class='{'done':task.done}'>{{task.title}}</span>
+            <select class='task-priority'>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
         </li>
     </ul>
+    <br/>
 </div>
 </section>

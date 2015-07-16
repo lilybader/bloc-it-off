@@ -94,7 +94,7 @@ section {
     }
 
     input[type="checkbox"]:checked {
-        background: #abd;
+        background: #6C89A8;
     }
 
     ul {
@@ -106,6 +106,19 @@ section {
         letter-spacing: 5px;
         color: #ffffff;
         font-size: 35px;
+    }
+
+    .task-priority {
+        width: 240px;
+        height: 34px;
+        overflow: hidden;
+        background: url(new_arrow.png) no-repeat center transparent;
+        border: 1px solid transparent;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #6C89A8;
+
     }
 }
 
