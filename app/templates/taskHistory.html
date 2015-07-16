@@ -1,1 +1,11 @@
-This is a task history page
+<div class="history">
+  <h3>Task History</h3>
+   <div ng-repeat="task in tasks">
+    <ul class="list-group"> 
+      <li class="list-group-item" ng-show="task.state == 'expired'">
+        {{task.task}}
+        <button class="button expired">!</button>
+      </li>
+    </ul>
+   </div> 
+</div>

@@ -1,13 +1,15 @@
 <section>
-<div ng-controller="currentTasks.controller">
-    blah blah
+<div ng-controller="taskController">
+    <br/>
     <form name='frm' ng-submit='addTask()'>
         <input type='text' name='newTask' ng-model='newTask' required />
-        <button ng-disabled='frm.$invalid'>Add Task</button>
+        <br/>
+        <button class='add-task-button' ng-disabled='frm.$invalid'>Add Task</button>
     </form>
+    <br/>
     <button ng-click='clearCompleted()'>Clear Completed</button>
     <ul>
-         <li ng-repeat='tasks in tasks'>
+         <li ng-repeat='task in task'>
             <input type="checkbox" ng-model='task.done' />
             <span ng-class='{'done':task.done}'>{{task.title}}</span>
         </li>

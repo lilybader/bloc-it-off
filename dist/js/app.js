@@ -27,12 +27,23 @@ app.config(['$locationProvider', '$stateProvider', function($locationProvider, $
   }]);
 
 app.controller('taskController', ['$scope', function ($scope) {
+    $scope.task = [
+        {'title': "Build a Task Manager", 'done':false}
+    ];
 
-
+    $scope.addTask = function() {
+        $scope.task.push({'title':$scope.newTask, 'done':false})
+        $scope.newTask = ''
+    }
+    $scope.clearCompleted = function() {
+        $scope.task = $scope.task.filter(function(item){
+            return !item.done
+        })
+    }
 }]);
 
-app.controller('taskController', ['$scope', function ($scope) {
-
+app.controller('taskHistoryController', ['$scope', function ($scope) {
+    
 
 }]);
 
