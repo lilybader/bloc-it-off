@@ -2,9 +2,9 @@
   <h3>Task History</h3>
    <div ng-repeat="task in tasks">
     <ul class="list-group"> 
-      <li class="list-group-item" ng-show="task.state == 'expired'">
+      <li class="list-group-item" ng-show="task.state == 'complete'">
         {{task.task}}
-        <button class="button expired">!</button>
+        <button class="button completed">✔</button>
       </li>
     </ul>
    </div> 

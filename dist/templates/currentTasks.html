@@ -1,25 +1,18 @@
-<section>
-<div ng-controller="taskController">
-    <br/>
-    <form name='frm' ng-submit='addTask()'>
-        <input type='text' name='newTask' ng-model='newTask' required />
-        <br/>
-        <button class='add-task-button' ng-disabled='frm.$invalid'>Add Task</button>
+<div class="current">
+  <h3>Current Tasks</h3>
+    <form class="form-inline" ng-submit="addTask(newTaskItem)">     
+      <div class ="form-group">
+        <input type="text" class="form-control" placeholder="What do I need to do?" ng-model="newTaskItem">
+      </div>  
+      <br/>        
+      <button type="submit" class="btn btn-default">add</button>   
     </form>
-    <br/>
-    <button ng-click='clearCompleted()'>Clear Completed</button>
-    <br/>
-    <ul>
-         <li ng-repeat='task in task'>
-            <input type="checkbox" ng-model='task.done' />
-            <span ng-class='{'done':task.done}'>{{task.title}}</span>
-            <select class='task-priority'>
-                <option value="high">High</option>
-                <option value="medium">Medium</option>
-                <option value="low">Low</option>
-            </select>
-        </li>
+   <div ng-repeat="task in tasks">
+    <ul> 
+      <li class="todo" ng-show="task.state == 'active'" ng-init="expireTask(task.$id)">
+        {{task.task}} 
+        <button class="button check"  ng-click="completeTask(task.$id)"></button>
+      </li>
     </ul>
-    <br/>
+   </div> 
 </div>
-</section>
