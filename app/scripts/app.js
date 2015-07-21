@@ -66,7 +66,7 @@ app.controller('taskController', ['$scope', '$firebase', function ($scope, $fire
     
 }]);
 
-app.controller('taskHistoryController', ['$scope', function ($scope) {
+app.controller('taskHistoryController', ['$scope', '$controller', function ($scope,$controller) {
     var ref = new Firebase("https://bloc-it-off-timer.firebaseio.com/tasks");
     var sync = $firebase(ref);
 
