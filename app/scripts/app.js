@@ -63,10 +63,10 @@ app.controller('taskController', ['$scope', '$firebase', function ($scope, $fire
            tasks.$save(task);
         }
     };
-    
+
 }]);
 
-app.controller('taskHistoryController', ['$scope', '$controller', function ($scope,$controller) {
+app.controller('taskHistoryController', ['$scope', '$firebase', function ($scope, $firebase) {
     var ref = new Firebase("https://bloc-it-off-timer.firebaseio.com/tasks");
     var sync = $firebase(ref);
 
@@ -74,7 +74,7 @@ app.controller('taskHistoryController', ['$scope', '$controller', function ($sco
     $scope.tasks = tasks;
 }]);
 
-app.controller('taskExpiredController', ['$scope', function ($scope) {
+app.controller('taskExpiredController', ['$scope', '$firebase', function ($scope, $firebase) {
     var ref = new Firebase("https://bloc-it-off-timer.firebaseio.com/tasks");
     var sync = $firebase(ref);
 

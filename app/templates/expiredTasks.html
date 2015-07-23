@@ -1,12 +1,12 @@
 <div class="expired">
   <h3>Expired Tasks</h3>
    <div ng-repeat="task in tasks">
-    <ul class="list-group"> 
+    <ul class="list-group">
       <li class="list-group-item" ng-show="task.state == 'expired'">
         {{task.task}}
         <button class="button expired">!</button>
       </li>
     </ul>
-   </div> 
+   </div>
 </div>
 
